@@ -58,6 +58,17 @@ class Validator(BaseValidatorNeuron):
         - Updating the scores
         """
         # TODO(developer): Rewrite this function based on your protocol definition.
+        #initialize empty metagraph 
+        #define training request vs end user request
+            #set a range of times to ask for a prediction
+                # this should be bounded a few hours away, but not too far away
+                #make sure its random
+            #validator will send a challenge to a miner with a time
+            #validator will populate a matrix with [UID, time of maturation, prediction]
+            #validator will check if any requests have matured 
+            #validator will compare matured requests to the data pulled
+            #validator will score the requests
+            #validator will populate the metagraph with scores
         return await forward(self)
 
 
